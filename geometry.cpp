@@ -9,7 +9,7 @@ class Point
         Point(float a,float b); //constructor
         float distance(void);
 
-        private:
+   
         float x;
         float y;
 
@@ -27,7 +27,9 @@ float Point::distance(void){
     return sqrt(x*x+y*y);
 
 }
-
+float distancelinepoint(Point p, Point q){
+    return sqrt((p.x-q.x)*(p.x-q.x)+(p.y-q.y)*(p.y-q.y))  ;                                       
+}
 
 
 
@@ -35,8 +37,9 @@ float Point::distance(void){
 int main()
     {
 
-    Point pt(2,3);
-    cout<<pt.distance()<<endl;
+    Point pt1(2,3);
+    Point pt2(4,5);
+    cout<<distancelinepoint(pt1,pt2)<<endl;
 
 
 
