@@ -9,7 +9,7 @@ class Point
         Point(float a,float b); //constructor
         float distance(void);
 
-   
+
         float x;
         float y;
 
@@ -28,7 +28,7 @@ float Point::distance(void){
 
 }
 float distancelinepoint(Point p, Point q){
-    return sqrt((p.x-q.x)*(p.x-q.x)+(p.y-q.y)*(p.y-q.y))  ;                                       
+    return sqrt((p.x-q.x)*(p.x-q.x)+(p.y-q.y)*(p.y-q.y))  ;
 }
 
 
@@ -37,9 +37,11 @@ float distancelinepoint(Point p, Point q){
 int main()
     {
 
-    Point pt1(2,3);
-    Point pt2(4,5);
-    cout<<distancelinepoint(pt1,pt2)<<endl;
+    Point pt1(0,0);
+    Point pt2(1,1);
+    //cout<<distancelinepoint(pt1,pt2)<<endl;
+
+  cout<<"kkjsnckajs"<<endl;
 
 
 
