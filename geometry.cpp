@@ -1,6 +1,9 @@
 #include<iostream>
 #include<math.h>
+#include<conio.h>
+#include<stdlib.h>
 #include<algorithm>
+#include<graphics.h>
 using namespace std;
 
 class Point
@@ -36,13 +39,17 @@ float distancelinepoint(Point p, Point q){
 
 int main()
     {
+        int gdriver=DETECT,gmode;
+        initgraph(&gdriver,&gmode,"C:\\tc\\bgi");
+        initwindow(400,500);
+        line(1,2,3);
 
-    Point pt1(0,0);
+   /* Point pt1(0,0);
     Point pt2(1,1);
     //cout<<distancelinepoint(pt1,pt2)<<endl;
 
   cout<<"kkjsnckajs"<<endl;
-
+*/
 
 
     }
