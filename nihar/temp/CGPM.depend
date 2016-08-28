@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1471806883 source:c:\users\nhar\documents\cgpm project\cgpm\temp.cpp
+	<iostream>
+	<graphics.h>
+
+1266078014 c:\program files (x86)\codeblocks-ep\sdk\winbgim\include\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
+1471806814 source:c:\users\nhar\documents\cgpm project\cgpm\temp1.cpp
+	<iostream>
+	<graphics.h>
+
