@@ -167,7 +167,7 @@ int main(int argc,char** argv)
 
     glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB|GLUT_DEPTH);
 
-    glutInitWindowSize(1440,900);
+    glutInitWindowSize(400,400);
 
     glutCreateWindow("Moving Circle");
 

@@ -1,85 +1,33 @@
-/*
-#ifndef WIN32 //if using windows then do windows specific stuff.
-#define WIN32_LEAN_AND_MEAN //remove MFC overhead from windows.h which can cause slowness
-#define WIN32_EXTRA_LEAN
-
-#include <windows.h>
-#endif
-
-#include <GL/gl.h>
-#include <GL/glut.h>
-#include <GL/glu.h>
-#include <conio.h>//needed for getch
-
-void setup() {
-       glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-}
-
-void create_bar() {
-       glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-       glColor3f(0.0f, 0.0f, 0.0f);
-       glRectf(-0.6f,-0.1f, 0.6f, -0.3f);
-       glutSwapBuffers();
-}
-
-int main(int argc, char *argv[])
-{
-       glutInit(&argc, argv);
-       glutInitDisplayMode(GLUT_RGB | GLUT_DEPTH | GLUT_DOUBLE);
-       glutInitWindowSize(800,600);
-       glutCreateWindow("Hello World");
-
-       setup();
-       glutDisplayFunc(create_bar);
-
-       glutMainLoop();
-
-       getch();//pause here to see results or lack there of
-       return 0;
-}
-
-*/
-
-#ifndef WIN32 //if using windows then do windows specific stuff.
-#define WIN32_LEAN_AND_MEAN //remove MFC overhead from windows.h which can cause slowness
-#define WIN32_EXTRA_LEAN
-
-#include <windows.h>
-#endif
-
-#include <GL/gl.h>
-#include <GL/glut.h>
-#include <GL/glu.h>
-#include <conio.h>//needed for getch
-#include<iostream>
 #include<stdlib.h>
-
-#ifdef __APPLE__
-#include<openGL/openGL.h>
-#include<GLUT/glut.h>
-#else
+#include<windows.h>
 #include<GL/glut.h>
-#endif
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <conio.h>//needed for getch
 
 using namespace std;
 
 float ballX = -0.3f;
 float ballY = 0.0f;
 float ballZ = -1.0f;
-/*
-float ballX2 = 0.3f;
-float ballY2 = 0.0f;
-float ballZ2 = -1.0f;
-*/
+
 static int flag=1;
 
-void drawBall(void) {
-
-        glColor3f(0.0, 1.0, 0.0); //set ball colour
-        glTranslatef(ballX,ballY,ballZ); //moving it toward the screen a bit on creation
-        glutSolidSphere (0.1, 10, 10); //create ball.
-
+void Draw(void) {
+	//glClear(GL_COLOR_BUFFER_BIT);
+	 glColor3f(3.0f, 2.0f, 1.0f);
+	 glTranslatef(ballX,ballY,ballZ);
+	glRectf(0.0f,0.0f, 0.26f, -0.13f);
+	/*glBegin(GL_POLYGON);
+		glVertex3f(0.25, 0.25, 0.0);
+		glVertex3f(0.75, 0.75, 0.0);
+		glVertex3f(1, 1.75, 0.0);
+		glVertex3f(2, 2.75, 0.0);
+	glEnd();*/
+	//glutSwapBuffers();
+	//glFlush();
 }
+
 
 void mousePress(int button,int state,int x, int y)
 {
@@ -99,6 +47,13 @@ void mousePress(int button,int state,int x, int y)
 
 
     glutPostRedisplay();
+}
+
+void Initialize() {
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
 }
 
 void initRendering()
@@ -128,7 +83,7 @@ void drawScene()
     glMatrixMode(GL_MODELVIEW);
 
     glLoadIdentity();
-    drawBall();
+    Draw();
     //drawBall2();
 
     glutSwapBuffers();
@@ -169,7 +124,7 @@ int main(int argc,char** argv)
 
     glutInitWindowSize(1440,900);
 
-    glutCreateWindow("Moving Circle");
+    glutCreateWindow("Moving Rect");
 
     initRendering();
 
@@ -185,3 +140,17 @@ int main(int argc,char** argv)
 
     return(0);
 }
+
+/*
+int main(int iArgc, char** cppArgv) {
+	glutInit(&iArgc, cppArgv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(250, 250);
+	glutInitWindowPosition(200, 200);
+	glutCreateWindow("XoaX.net");
+	Initialize();
+	glutDisplayFunc(Draw);
+	glutMainLoop();
+	return 0;
+}
+*/
