@@ -1,4 +1,5 @@
 #include<stdlib.h>
+#include<iostream>
 #include<windows.h>
 #include<GL/glut.h>
 #include <GL/gl.h>
@@ -13,11 +14,12 @@ float ballZ = -1.0f;
 
 static int flag=1;
 
-void Draw(void) {
+void button_1(void) {
 	//glClear(GL_COLOR_BUFFER_BIT);
 	 glColor3f(3.0f, 2.0f, 1.0f);
-	 glTranslatef(ballX,ballY,ballZ);
-	glRectf(0.0f,0.0f, 0.26f, -0.13f);
+	 glTranslatef(-0.5f,0.3f,ballZ);
+	 //cout<<ballX<<endl;
+	glRectf(0.0f,0.0f, 0.1f, -0.1f);
 	/*glBegin(GL_POLYGON);
 		glVertex3f(0.25, 0.25, 0.0);
 		glVertex3f(0.75, 0.75, 0.0);
@@ -28,10 +30,41 @@ void Draw(void) {
 	//glFlush();
 }
 
+
+void Draw(void) {
+	//glClear(GL_COLOR_BUFFER_BIT);
+	 glColor3f(3.0f, 2.0f, 1.0f);
+	 glTranslatef(ballX,ballY,ballZ);
+	 //cout<<ballX<<endl;
+	glRectf(0.0f,0.0f, 0.26f, -0.13f);
+	/*glBegin(GL_POLYGON);
+		glVertex3f(0.25, 0.25, 0.0);
+		glVertex3f(0.75, 0.75, 0.0);
+		glVertex3f(1, 1.75, 0.0);
+		glVertex3f(2, 2.75, 0.0);
+	glEnd();*/
+	//glutSwapBuffers();
+	//glFlush();
+}
+void random(int x)
+{
+}
+int temp=500;
+
 void mousehold(int x, int y)
 {
-    ballX=x;
-    ballY=y;
+    //temp=x;
+    x=x-683.0;
+    ballX=float(x)/683.0;
+    glutTimerFunc(100,random,5);
+   // ballY=y;
+    //cout<<ballX<<endl;
+
+    //Draw();
+
+
+
+glutPostRedisplay();
 
 }
 
@@ -42,13 +75,21 @@ void mousePress(int button,int state,int x, int y)
     {
          if(button==GLUT_LEFT_BUTTON)
          {
-            //ballX=x;
-            ballX -=0.05f ;
+             //x=x-683;
+
+            //cout<<"x"<<x<<endl;
+
+            //ballX=float(x)/683.0;
+            //ballX=-1.0f;
+
+            cout<<"ballx"<<ballX<<endl;
+            //ballX -=0.05f ;
          }
 
           if(button==GLUT_RIGHT_BUTTON)
          {
-            ballX +=0.05f ;
+             //ballX+=0.05f;
+            //ballX +=0.05f ;
          }
 
     }
@@ -91,6 +132,8 @@ void drawScene()
     glMatrixMode(GL_MODELVIEW);
 
     glLoadIdentity();
+    button_1();
+      glLoadIdentity();
     Draw();
     //drawBall2();
 
@@ -130,15 +173,15 @@ int main(int argc,char** argv)
 
     glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB|GLUT_DEPTH);
 
-    glutInitWindowSize(1440,900);
+    glutInitWindowSize(1366,768);
 
     glutCreateWindow("Moving Rect");
 
     initRendering();
 
     glutDisplayFunc(drawScene);
-    //glutMotionFunc(mousehold);
-    glutMouseFunc(mousePress); // keyboard function
+    glutMotionFunc(mousehold);
+    //glutMouseFunc(mousePress); // keyboard function
     glutReshapeFunc(handleResize);
     //autorot();
 
