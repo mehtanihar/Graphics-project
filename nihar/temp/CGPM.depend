@@ -16,3 +16,14 @@
 	<iostream>
 	<graphics.h>
 
+1473769494 source:c:\users\nhar\documents\cgpm_project\graphics-project\nihar\temp\temp.cpp
+	<iostream>
+	<graphics.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
