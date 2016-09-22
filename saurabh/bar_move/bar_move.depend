@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1472582354 source:c:\users\saurabh bajaj\documents\cgpm\graphics-project\saurabh\interrupt_1\main.cpp
+<<<<<<< HEAD
+1472578038 source:c:\users\nhar\documents\cgpm_project\graphics-project\saurabh\bar_move\main.cpp
+=======
+1472577478 source:c:\users\saurabh bajaj\documents\cgpm\graphics-project\saurabh\bar_move\main.cpp
+>>>>>>> e3210ac075fb1dada8f9d4f2f09bdee2234f1196
 	<stdlib.h>
-	<iostream>
 	<windows.h>
 	<GL/glut.h>
 	<GL/gl.h>
@@ -212,25 +215,26 @@
 1258801310 c:\program files (x86)\codeblocks-ep\mingw\include\oleidl.h
 	<objfwd.h>
 
+<<<<<<< HEAD
+1472407195 c:\program files (x86)\codeblocks-ep\mingw\include\gl\glut.h
+=======
 976643572 c:\program files (x86)\codeblocks-ep\mingw\include\gl\glut.h
+>>>>>>> e3210ac075fb1dada8f9d4f2f09bdee2234f1196
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
 
+<<<<<<< HEAD
+1472406264 c:\program files (x86)\codeblocks-ep\mingw\include\gl\gl.h
+
+1472406264 c:\program files (x86)\codeblocks-ep\mingw\include\gl\glu.h
+=======
 1044785826 c:\program files (x86)\codeblocks-ep\mingw\include\gl\gl.h
 
 1044785826 c:\program files (x86)\codeblocks-ep\mingw\include\gl\glu.h
+>>>>>>> e3210ac075fb1dada8f9d4f2f09bdee2234f1196
 	<GL/gl.h>
 
 1259408554 c:\program files (x86)\codeblocks-ep\mingw\include\conio.h
 	<_mingw.h>
-
-1472585942 source:c:\users\nhar\documents\cgpm_project\graphics-project\saurabh\interrupt_1\main.cpp
-	<stdlib.h>
-	<iostream>
-	<windows.h>
-	<GL/glut.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<conio.h>
 
