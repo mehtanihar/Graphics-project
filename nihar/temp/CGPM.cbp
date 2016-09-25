@@ -46,7 +46,6 @@
 			<Add directory="$(CODEBLOCKS)\sdk\winbgim\lib" />
 		</Linker>
 		<Unit filename="temp.cpp" />
-		<Unit filename="temp1.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
