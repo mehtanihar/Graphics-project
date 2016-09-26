@@ -38,3 +38,14 @@
 	<GL/glu.h>
 	<conio.h>
 
+1474649369 source:c:\users\nihar\documents\cgpm_project\graphics-project\nihar\temp\temp.cpp
+	<iostream>
+	<graphics.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+

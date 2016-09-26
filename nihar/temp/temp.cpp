@@ -76,7 +76,7 @@ move_force();
 
 }
 */
-
+#include<algorithm>
 #include<stdlib.h>
 #include<iostream>
 #include<windows.h>
@@ -84,7 +84,7 @@ move_force();
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <conio.h>//needed for getch
-
+#define GL_GLEXT_PROTOTYPES 1
 using namespace std;
 
 float ballX = -0.3f;
@@ -110,6 +110,7 @@ void button_2(void) {
 	 glTranslatef(-0.5f,0.2f,ballZ);
 
 	glRectf(0.0f,0.0f, 0.05f, -0.05f);
+
 
 }
 
@@ -182,6 +183,40 @@ glutPostRedisplay();
 
 }
 
+float func(float x,float P,float L){
+return -1*P*x/48*(3*L*L-4*x*x)*5;
+}
+
+void draw_graph(){
+
+float P=1;
+float a=0.52/2;
+float b=a;
+
+
+float x, dx = 0.01f;
+
+    glTranslatef(0.24f,-0.25f,0);
+	glPushMatrix(); /* GL_MODELVIEW is default */
+
+	glColor3f(1.0, 1.0, 0.0);
+	//glTranslatef()
+    //glLoadIdentity();
+	glBegin(GL_LINE_STRIP);
+
+
+	for(x = 0.0f; x < 0.5f; x += dx)
+	{
+
+		glVertex2f(x, func(x,P,0.52f));
+	}
+
+	glEnd();
+
+	glPopMatrix();
+
+
+}
 
 int bar=0; int force=0;
 
@@ -272,6 +307,7 @@ void drawScene()
     glLoadIdentity();
     button_1();
     button_2();
+    draw_graph();
     //glLoadIdentity();
     if(bar==1){Draw();}
 
