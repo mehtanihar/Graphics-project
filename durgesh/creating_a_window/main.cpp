@@ -9,7 +9,7 @@ LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 HWND textfield, textfieldx, textfieldy,textfieldZ, textfield_type_of_force, textfield_of_magnitude,textfield_Location_of_force;
 HWND button, button_insert_bar, button_insert_force, button_ok;
 HWND textbox, textboxX, textboxY,textboxZ, force_combobox, textbox_magnitude,force_Location;
-char position[20];
+char position1[20],position2[20],position3[20],position4[20],position5[20];
 int pos1[20];
 const char *A[]={"Axial","Bending","Torsion"};
 
@@ -44,6 +44,9 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
     wincl.cbClsExtra = 0;                      /* No extra bytes after the window class */
     wincl.cbWndExtra = 0;                      /* structure or the window instance */
     /* Use Windows's default colour as the background of the window */
+
+
+
     wincl.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
 
     /* Register the window class, and if it fails quit the program */
@@ -65,7 +68,6 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
            hThisInstance,       /* Program Instance handler */
            NULL                 /* No Window Creation data */
            );
-
 
     /* Make the window visible on the screen */
     ShowWindow (hwnd, nCmdShow);
@@ -249,16 +251,23 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 
         }
         break;
-*/
+*///textboxX, textboxY,textboxZ, force_combobox, textbox_magnitude,force_Location
         switch (LOWORD(wParam))
         {
         case 1:
-            int gwtstat=0;
-            gwtstat = GetWindowText(force_Location, &position[0] ,20);
+            int gwtstat1=0,gwtstat2=0,gwtstat3=0,gwtstat4=0,gwtstat5=0;
+            gwtstat1 = GetWindowText(textboxX, &position1[0] ,20);
+            gwtstat2 = GetWindowText(textboxY, &position2[0] ,20);
+            gwtstat3 = GetWindowText(textboxZ, &position3[0] ,20);
+            gwtstat4 = GetWindowText(textbox_magnitude, &position4[0] ,20);
+            gwtstat5 = GetWindowText(force_Location, &position5[0] ,20);
 
             ::MessageBeep(MB_ICONWARNING);
-            ::MessageBox(hwnd,position,"The text was",MB_OKCANCEL);
+            ::MessageBox(hwnd,position1,"The text was",MB_OKCANCEL);
                     //prompt to enter something
+
+
+
 
             break;
 
@@ -267,7 +276,6 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         }
         break;
 
-cout<<position;
         case WM_DESTROY:
             PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
             break;
