@@ -9,6 +9,7 @@ HWND button, button_insert_bar, button_insert_force, button_ok;
 HWND textbox, textboxX, textboxY, force_combobox, textbox_magnitude;
 char position[20];
 int pos1[20];
+const char *A[]={"Axial","Bending","Torsion"};
 
 
 
@@ -142,7 +143,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             force_combobox = CreateWindow("COMBOBOX",
                                           "hey",
                                           CBS_DROPDOWN | CBS_HASSTRINGS | WS_VISIBLE | WS_CHILD | WS_BORDER,
-                                          130,130,100,20,
+                                          130,130,100,2000,
                                           hwnd,NULL,NULL,NULL);
 
             textfield_of_magnitude = CreateWindow("STATIC",
@@ -167,6 +168,12 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                                     WS_VISIBLE | WS_CHILD | WS_BORDER,
                                     350,400,100,20,
                                     hwnd,NULL,NULL,NULL);
+
+
+            SendMessage(force_combobox,(UINT) CB_ADDSTRING,(WPARAM) 0,(LPARAM) A[0]);
+            SendMessage(force_combobox,(UINT) CB_ADDSTRING,(WPARAM) 0,(LPARAM) A[1]);
+            SendMessage(force_combobox,(UINT) CB_ADDSTRING,(WPARAM) 0,(LPARAM) A[2]);
+
 
         /*button = CreateWindow("BUTTON",
                               "This is a button",
