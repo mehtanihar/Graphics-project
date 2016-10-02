@@ -67,7 +67,16 @@ void create_force(int x1, int y1){
     line(x1+10,y1-10,x1,y1);*/
 }
 
-
+void DrawCircle(float cx, float cy, float r, int num_segments) {
+    glBegin(GL_LINE_LOOP);
+    for (int ii = 0; ii < num_segments; ii++)   {
+        float theta = 2.0f * 3.1415926f * float(ii) / float(num_segments);//get the current angle
+        float x = r * cosf(theta);//calculate the x component
+        float y = r * sinf(theta);//calculate the y component
+        glVertex2f(x + cx, y + cy);//output vertex
+    }
+    glEnd();
+}
 
 void Draw(void) {
 	//glClear(GL_COLOR_BUFFER_BIT);
@@ -76,6 +85,36 @@ void Draw(void) {
 	 glTranslatef(0.0f,0.0f,ballZ);
 	 //cout<<ballX<<endl;
 	glRectf(-0.26f,0.0f, 0.26f, -0.05f);
+    DrawCircle(.27f,-.085,0.005,100) ;
+    DrawCircle(.25f,-.085,0.005,100) ;
+	glLoadIdentity();
+
+    glBegin(GL_LINES);              // Fixed Support
+    glVertex3f(-0.26f, -.05f, ballZ);
+    glVertex3f(-.28f, -0.08f, ballZ);
+    glEnd();
+    glBegin(GL_LINES);
+    glVertex3f(-0.26f, -.05f, ballZ);
+    glVertex3f(-.24f, -0.08f, ballZ);
+    glEnd();
+    glBegin(GL_LINES);
+    glVertex3f(-0.24f, -.08f, ballZ);
+    glVertex3f(-.28f, -0.08f, ballZ);
+    glEnd();
+
+    glBegin(GL_LINES);              // Roller Support
+    glVertex3f(0.26f, -.05f, ballZ);
+    glVertex3f(.28f, -0.08f, ballZ);
+    glEnd();
+    glBegin(GL_LINES);
+    glVertex3f(0.26f, -.05f, ballZ);
+    glVertex3f(.24f, -0.08f, ballZ);
+    glEnd();
+    glBegin(GL_LINES);
+    glVertex3f(0.24f, -.08f, ballZ);
+    glVertex3f(.28f, -0.08f, ballZ);
+    glEnd();
+
 	/*glBegin(GL_POLYGON);
 		glVertex3f(0.25, 0.25, 0.0);
 		glVertex3f(0.75, 0.75, 0.0);

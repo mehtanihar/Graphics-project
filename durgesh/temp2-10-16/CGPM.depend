@@ -60,3 +60,14 @@
 	<GL/glu.h>
 	<conio.h>
 
+1475433097 source:c:\users\durgesh\documents\github\graphics-project\durgesh\temp2-10-16\temp.cpp
+	<math.h>
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
