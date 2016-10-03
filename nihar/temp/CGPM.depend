@@ -49,3 +49,13 @@
 	<GL/glu.h>
 	<conio.h>
 
+1475081353 source:c:\users\nihar\documents\graphics-project\nihar\temp\temp.cpp
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
