@@ -93,3 +93,14 @@
 	<GL/glu.h>
 	<conio.h>
 
+1475481763 source:c:\users\asus-pc\desktop\cgpm\project\graphics-project\nihar\temp2-10-16\temp.cpp
+	<math.h>
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+

@@ -234,15 +234,16 @@ float x, dx = 0.01f;
 	glColor3f(1.0, 1.0, 0.0);
 	//glTranslatef()
     //glLoadIdentity();
+
 	glBegin(GL_LINE_STRIP);
 	glVertex3f(-0.25f, -0.45f, ballZ);
     glVertex3f(-0.25f, -.55f, ballZ);
 	glEnd();
 
-	/*glBegin(GL_LINE_STRIP);
-	glVertex3f(0.75f, -0.45f , ballZ);
-    glVertex3f(0.75f, -.55f, ballZ);
-	glEnd();*/
+	glBegin(GL_LINE_STRIP);
+	glVertex3f(0.78f, -0.45f , ballZ);
+    glVertex3f(0.78f, -.55f, ballZ);
+	glEnd();
 	glBegin(GL_LINE_STRIP);
 
 
