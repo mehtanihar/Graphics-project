@@ -217,8 +217,8 @@ else{return -2*P*sin(t)*(L-x)/48*(3*L*L-4*(L-x)*(L-x))*5;}
 
 float func(float x,float a,float P,float L){
 
-if(x<a){ return -P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)); }
-else{return -P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)-(L-a)*(L-a)*(L-a)/6); }
+if(x<a){ return -P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)*x); }
+else{return -P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)*x-(x-a)*(x-a)*(x-a)/6); }
 }
 
 void draw_graph(){
