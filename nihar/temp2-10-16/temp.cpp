@@ -18,6 +18,8 @@ float t = 1.52;
 
 static int flag=1;
 
+float force_x=0;
+float force_y=0;
 
 void button_1(void) {
 
@@ -44,7 +46,7 @@ void button_1(void) {
 
 void button_2(void) {
 
-    glPushMatrix();
+     glPushMatrix();
      glLoadIdentity();
 	 glTranslatef(-0.45f,0.16f,ballZ);
 	 glColor3f(1.0f, 1.0f, 0.0f);
@@ -60,31 +62,45 @@ void button_2(void) {
 	 glLoadIdentity();
 	 glTranslatef(-0.5f,0.2f,ballZ);
 
-	glRectf(0.0f,0.0f, 0.05f, -0.05f);
+	 glRectf(0.0f,0.0f, 0.05f, -0.05f);
 
 
 }
 
-void create_force(int x1, int y1){
+void create_force(float x1, float y1){
+
+
     glLineWidth(2.5);
 
-   //glColor3f(1.0, 0.0, 0.0);
+    //glColor3f(1.0, 0.0, 0.0);
     glLoadIdentity();
     glBegin(GL_LINES);
-    glVertex3f(0.0, 0.0, ballZ);
-    glVertex3f(0.0f, 0.05f, ballZ);
+    glVertex3f(x1, y1, ballZ);
+    glVertex3f(x1+0.0f, y1+0.05f, ballZ);
     glEnd();
+
+
 
     glLoadIdentity();
     glBegin(GL_LINES);
-    glVertex3f(0.0, 0.0, ballZ);
-    glVertex3f(-0.01f, 0.01f, ballZ);
+    glVertex3f(x1, y1, ballZ);
+    glVertex3f(x1-0.01f, y1+0.01f, ballZ);
     glEnd();
 
-     glLoadIdentity();
+/*
+       glLoadIdentity();
     glBegin(GL_LINES);
-    glVertex3f(0.0, 0.0, ballZ);
+    glVertex3f(0, 0, ballZ);
     glVertex3f(0.01f, 0.01f, ballZ);
+    glEnd();
+
+
+*/
+
+    glLoadIdentity();
+    glBegin(GL_LINES);
+    glVertex3f(x1, y1, ballZ);
+    glVertex3f(x1+0.01f, y1+0.01f, ballZ);
     glEnd();
 
 
@@ -217,8 +233,8 @@ else{return -2*P*sin(t)*(L-x)/48*(3*L*L-4*(L-x)*(L-x))*5;}
 
 float func(float x,float a,float P,float L){
 
-if(x<a){ return -P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)*x); }
-else{return -P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)*x-(x-a)*(x-a)*(x-a)/6); }
+if(x<a){ return -8*P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)*x); }
+else{return -8*P*sin(t)*((L-a)/L*x*x*x/6-(L-a)/6/L*(2*L*a-a*a)*x-(x-a)*(x-a)*(x-a)/6); }
 }
 
 void draw_graph(){
@@ -252,7 +268,7 @@ float x, dx = 0.01f;
 	for(x = 0.0f; x < 0.52f; x += dx)
 	{
 
-		glVertex2f(x, -0.2f+func(x,0.26f,P,0.52f));
+		glVertex2f(x, -0.2f+func(x,force_x,P,0.52f));
 
 	}
 
@@ -261,7 +277,7 @@ float x, dx = 0.01f;
 	for(x = 0.0f; x < 0.52f; x += dx)
 	{
 
-		glVertex2f(x, -0.25f +  func(x,0.26f,P,0.52f));
+		glVertex2f(x, -0.25f +  func(x,force_x,P,0.52f));
 
 	}
 
@@ -293,7 +309,10 @@ int k=0;
             bar=1;
             break;
             case 2:
-            create_force(655,0);
+
+            force_x=0.39f;
+            force_y=0.0f;
+            create_force(force_x-0.26,force_y); // 655 center
             force=1;
             break;
 
@@ -366,7 +385,7 @@ void drawScene()
     //glLoadIdentity();
     if(bar==1){Draw();}
 
-    if(force==1){create_force(655,0);}
+    if(force==1){create_force(force_x-0.26,force_y);} //655
     //drawBall2();
 
     glutSwapBuffers();
