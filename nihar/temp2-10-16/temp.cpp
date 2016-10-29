@@ -213,10 +213,6 @@ float func(float x,float P,float L){
 if(x<(L/2)){ return -2*P*sin(t)*x/48*(3*L*L-4*x*x)*5;}
 else{return -2*P*sin(t)*(L-x)/48*(3*L*L-4*(L-x)*(L-x))*5;}
 }
-float func2(float x,float P,float L){
-
-return -2*P*sin(t)*(L-x)/48*(3*L*L-4*(L-x)*(L-x))*5;
-}
 
 
 void draw_graph(){
@@ -360,7 +356,7 @@ void drawScene()
     glLoadIdentity();
     button_1();
     button_2();
-    draw_graph();
+    if(bar==1 && force==1){draw_graph();}
     //glLoadIdentity();
     if(bar==1){Draw();}
 
