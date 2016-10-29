@@ -1,0 +1,106 @@
+# depslib dependency file v1.0
+1471806883 source:c:\users\nhar\documents\cgpm project\cgpm\temp.cpp
+	<iostream>
+	<graphics.h>
+
+1266078014 c:\program files (x86)\codeblocks-ep\sdk\winbgim\include\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
+1471806814 source:c:\users\nhar\documents\cgpm project\cgpm\temp1.cpp
+	<iostream>
+	<graphics.h>
+
+1471806998 source:c:\users\nhar\documents\cgpm_project\graphics-project\nihar\temp\temp1.cpp
+	<iostream>
+	<graphics.h>
+
+1473769494 source:c:\users\nhar\documents\cgpm_project\graphics-project\nihar\temp\temp.cpp
+	<iostream>
+	<graphics.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
+1474546676 source:c:\users\saurabh bajaj\documents\cgpm\graphics-project\nihar\temp\temp.cpp
+	<iostream>
+	<graphics.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
+1474649369 source:c:\users\nihar\documents\cgpm_project\graphics-project\nihar\temp\temp.cpp
+	<iostream>
+	<graphics.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
+1475424387 source:c:\users\durgesh\desktop\temp\temp.cpp
+	<math.h>
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
+1475433097 source:c:\users\durgesh\documents\github\graphics-project\durgesh\temp2-10-16\temp.cpp
+	<math.h>
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
+1475433861 source:c:\users\nihar\documents\graphics-project\durgesh\temp2-10-16\temp.cpp
+	<math.h>
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
+1475482739 source:c:\users\nihar\documents\graphics-project\nihar\temp2-10-16\temp.cpp
+	<math.h>
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
+1475481763 source:c:\users\asus-pc\desktop\cgpm\project\graphics-project\nihar\temp2-10-16\temp.cpp
+	<math.h>
+	<algorithm>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<conio.h>
+
