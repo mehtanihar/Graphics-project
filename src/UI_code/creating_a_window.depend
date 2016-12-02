@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1474893833 source:d:\onedrive\documents\sem 7\cgpm me 735\creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+
+1475048509 source:c:\users\saurabh bajaj\documents\cgpm\graphics-project\saurabh\creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+
+1475051059 source:c:\users\durgesh\documents\github\graphics-project\saurabh\creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+
+1475428102 source:c:\users\durgesh\desktop\new_creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+
+1475428648 source:c:\users\durgesh\documents\github\graphics-project\durgesh\2-oct creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+
+1477743496 source:c:\users\saurabh bajaj\documents\cgpm\graphics-project\durgesh\2-oct creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+
+1477929367 source:c:\users\nihar\downloads\ui\2-oct creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+	<iostream>
+	<fstream>
+
+1477929367 source:c:\users\nihar\downloads\ui\project\2-oct creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+	<iostream>
+	<fstream>
+
+1478104852 source:c:\users\nihar\documents\project\project\2-oct creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+	<iostream>
+	<fstream>
+
+1478129392 source:d:\project\2-oct creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+	<iostream>
+	<fstream>
+
+1480661918 source:d:\cgpm final\project\2-oct creating_a_window\main.cpp
+	<windows.h>
+	<typeinfo>
+	<iostream>
+	<fstream>
+
+1480663795 source:c:\users\nihar\documents\final\cgpm project\graphics-project\src\ui_code\main.cpp
+	<windows.h>
+	<typeinfo>
+	<iostream>
+	<fstream>
+
