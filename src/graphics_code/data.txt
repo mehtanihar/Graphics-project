@@ -1,5 +1,0 @@
-simply_supported
-free
-100
-10
-10
